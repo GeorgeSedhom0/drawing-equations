@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --unit: 30px;
+  --spacing: 10px;
+}
+body {
+  display: grid;
+  place-items: center;
+}
+.point {
+  width: calc(var(--unit) / 50);
+  aspect-ratio: 1/1;
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.numbers-line {
+  width: 80vw;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+  position: relative;
+}
+.numbers-line-v {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: calc(var(--spacing) / 15);
+  height: 100%;
+  background-color: black;
+  counter-reset: unset;
+}
+.numbers-line-h {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  height: calc(var(--spacing) / 15);
+  width: 100%;
+  background-color: black;
+}
+.h-point {
+  translate: -50% calc((var(--spacing)));
+  position: absolute;
+}
+.v-point {
+  translate: calc((var(--spacing)) * -2) -50%;
+  position: absolute;
+}
+.v-point::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: calc((var(--spacing) * 1.55)) -50%;
+  width: var(--spacing);
+  aspect-ratio: 10/1;
+  display: block;
+  background-color: black;
+}
+.h-point::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  translate: -50% calc(var(--spacing) * -1.5);
+  height: var(--spacing);
+  aspect-ratio: 1/10;
+  display: block;
+  background-color: black;
+}
+.guide-lines-v {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: calc(var(--spacing) / 25);
+  height: 100%;
+  background-color: rgba(31, 110, 150, 0.5);
+  z-index: -1;
+}
+.guide-lines-h {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  height: calc(var(--spacing) / 25);
+  width: 100%;
+  background-color: rgba(31, 110, 150, 0.5);
+  z-index: -1;
+}
+.circle {
+  display: block;
+  border: 1px solid black;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.cover-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: white; */
+  z-index: 1;
+}
