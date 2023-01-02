@@ -162,19 +162,23 @@ const createCircleV2 = (r, a, b) => {
 createCircleV2(5, 2, 4);
 
 addLineY.addEventListener("click", () => {
-  createCurveLine(
-    parseInt(eqXY.value),
-    parseInt(eqNY.value),
-    parseInt(eqPY.value),
-    "y"
-  );
+  if (isNaN(eqXY.value) || isNaN(eqNY.value) || isNaN(eqPY.value)) {
+    alert("Please enter numbers");
+  } else {
+    createCurveLine(
+      parseInt(eqXY.value),
+      parseInt(eqNY.value),
+      parseInt(eqPY.value),
+      "y"
+    );
+  }
 });
 
 addLineX.addEventListener("click", () => {
-  createCurveLine(
-    parseInt(eqYX.value),
-    parseInt(eqNYX.value),
-    parseInt(eqPYX.value),
-    "x"
-  );
+  const eqYXValue = parseInt(eqYX.value);
+  const eqNYXValue = parseInt(eqNYX.value);
+  const eqPYXValue = parseInt(eqPYX.value);
+  if (eqYXValue && eqNYXValue && eqPYXValue) {
+    createCurveLine(eqYXValue, eqNYXValue, eqPYXValue, "x");
+  }
 });

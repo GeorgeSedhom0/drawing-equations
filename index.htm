@@ -5,55 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js" defer></script>
-    <script src="delaySubTitle.js" defer></script>
     <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
   </head>
   <body>
     <main>
-      <h1>Enter the X Y and R for the circle</h1>
-      <input type="number" id="x" value="1" />
-      <input type="number" id="y" value="1" />
-      <input type="number" id="r" value="1" />
-      <button id="submit">Add Circle</button>
-      <br />
-      <div id="yEq">
-        <h4>Line From Equation</h4>
-        <span> Format : y = mx<sup>p</sup>+ c </span>
-        <h5>
-          Y =
-          <input type="number" class="eqX" value="2" />
-          X
-          <sup>
-            <!-- select from 2 or 3 -->
-            <select class="eqP">
-              <option value="2">2</option>
-              <option value="1">1</option>
-            </select>
-          </sup>
-          <input type="number" class="eqN" value="2" />
-          <button class="submitLine">Add Line</button>
-        </h5>
-      </div>
+      <div class="inputs">
+        <div class="input">
+          <h1>Enter the X Y and R for the circle</h1>
+          <input type="number" id="x" value="1" />
+          <input type="number" id="y" value="1" />
+          <input type="number" id="r" value="1" />
+          <button id="submit">Add Circle</button>
+        </div>
+        <div class="input" id="yEq">
+          <h4>Line From Equation</h4>
+          <span> Format : y = mx<sup>p</sup>+ c </span>
+          <h5>
+            Y =
+            <input type="number" class="eqX" value="2" />
+            X
+            <sup>
+              <!-- select from 2 or 3 -->
+              <select class="eqP">
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </sup>
+            <input type="number" class="eqN" value="2" />
+            <button class="submitLine">Add Line</button>
+          </h5>
+        </div>
 
-      <div id="xEq">
-        <h4>Line From Equation</h4>
-        <span> Format : x = my<sup>p</sup>+ c </span>
-        <h5>
-          Y =
-          <input type="number" class="eqY" value="2" />
-          X
-          <sup>
-            <!-- select from 2 or 3 -->
-            <select class="eqP">
-              <option value="2">2</option>
-              <option value="1">1</option>
-            </select>
-          </sup>
-          <input type="number" class="eqN" value="2" />
-          <button class="submitLine">Add Line</button>
-        </h5>
+        <div class="input" id="xEq">
+          <h4>Line From Equation</h4>
+          <span> Format : x = my<sup>p</sup>+ c </span>
+          <h5>
+            Y =
+            <input type="number" class="eqY" value="2" />
+            X
+            <sup>
+              <!-- select from 2 or 3 -->
+              <select class="eqP">
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </sup>
+            <input type="number" class="eqN" value="2" />
+            <button class="submitLine">Add Line</button>
+          </h5>
+        </div>
       </div>
 
       <div class="numbers-line">

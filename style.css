@@ -4,16 +4,56 @@
   box-sizing: border-box;
   --unit: 30px;
   --spacing: 10px;
+  --main-color: #fff;
+  --secondary-color: #000;
+  --third-color: #222;
 }
 body {
   display: grid;
   place-items: center;
+  color: var(--main-color);
+  background-color: var(--third-color);
+}
+input,
+button,
+select {
+  background-color: var(--third-color);
+  color: var(--main-color);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid var(--main-color);
+  transition: all 0.3s ease;
+}
+button,
+select {
+  cursor: pointer;
+}
+button:hover,
+select:hover {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  transition: all 0.3s ease;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* width: 50%; */
+  gap: 1em;
+}
+.input {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 .point {
   width: calc(var(--unit) / 50);
   aspect-ratio: 1/1;
   display: block;
-  background-color: black;
+  background-color: var(--main-color);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -23,7 +63,7 @@ body {
 .numbers-line {
   width: 80vw;
   aspect-ratio: 1/1;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   position: relative;
 }
 .numbers-line-v {
@@ -33,7 +73,7 @@ body {
   translate: -50% 0;
   width: calc(var(--spacing) / 15);
   height: 100%;
-  background-color: black;
+  background-color: var(--main-color);
   counter-reset: unset;
 }
 .numbers-line-h {
@@ -43,7 +83,7 @@ body {
   translate: 0 -50%;
   height: calc(var(--spacing) / 15);
   width: 100%;
-  background-color: black;
+  background-color: var(--main-color);
 }
 .h-point {
   translate: -50% calc((var(--spacing)));
@@ -61,7 +101,7 @@ body {
   width: var(--spacing);
   aspect-ratio: 10/1;
   display: block;
-  background-color: black;
+  background-color: var(--main-color);
 }
 .h-point::before {
   content: "";
@@ -71,7 +111,7 @@ body {
   height: var(--spacing);
   aspect-ratio: 1/10;
   display: block;
-  background-color: black;
+  background-color: var(--main-color);
 }
 .guide-lines-v {
   position: absolute;
@@ -95,7 +135,7 @@ body {
 }
 .circle {
   display: block;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   border-radius: 50%;
   aspect-ratio: 1/1;
   position: absolute;
